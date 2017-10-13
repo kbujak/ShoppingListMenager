@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D7E9458885CB28B5A4581767 /* Pods_ShoppingListMenager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */; };
+		F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020F8611F90E29100CF4B47 /* RegisterViewController.swift */; };
+		F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A859AA1F90DC8400613830 /* UIViewController.swift */; };
 		F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */; };
-		F0EDAF2D1F90CF5D0092784D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2C1F90CF5D0092784D /* ViewController.swift */; };
+		F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */; };
 		F0EDAF301F90CF5D0092784D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EDAF2E1F90CF5D0092784D /* Main.storyboard */; };
 		F0EDAF321F90CF5D0092784D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0EDAF311F90CF5D0092784D /* Assets.xcassets */; };
 		F0EDAF351F90CF5D0092784D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EDAF331F90CF5D0092784D /* LaunchScreen.storyboard */; };
@@ -19,9 +21,13 @@
 		C5EC03F6C854EAF4934B3E0B /* Pods-ShoppingListMenager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingListMenager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingListMenager/Pods-ShoppingListMenager.debug.xcconfig"; sourceTree = "<group>"; };
 		D57604170656044B40D4F46B /* Pods-ShoppingListMenager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingListMenager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingListMenager/Pods-ShoppingListMenager.release.xcconfig"; sourceTree = "<group>"; };
 		EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingListMenager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F020F8611F90E29100CF4B47 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0A859A81F90D8B100613830 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		F0A859AA1F90DC8400613830 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F0E2C96D1F90D5FC001209BD /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo.gif; sourceTree = "<group>"; };
 		F0EDAF271F90CF5D0092784D /* ShoppingListMenager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListMenager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0EDAF2C1F90CF5D0092784D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0EDAF2F1F90CF5D0092784D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0EDAF311F90CF5D0092784D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0EDAF341F90CF5D0092784D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,9 +63,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F020F85F1F90DFFC00CF4B47 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */,
+				F020F8611F90E29100CF4B47 /* RegisterViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F020F8601F90E03500CF4B47 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */,
+				F0EDAF311F90CF5D0092784D /* Assets.xcassets */,
+				F0EDAF331F90CF5D0092784D /* LaunchScreen.storyboard */,
+			);
+			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		F0A859A91F90DC7100613830 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F0A859AA1F90DC8400613830 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F0E2C96C1F90D5EA001209BD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F0E2C96D1F90D5FC001209BD /* logo.gif */,
+				F0A859A81F90D8B100613830 /* button.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		F0EDAF1E1F90CF5D0092784D = {
 			isa = PBXGroup;
 			children = (
+				F0E2C96C1F90D5EA001209BD /* Images */,
 				F0EDAF291F90CF5D0092784D /* ShoppingListMenager */,
 				F0EDAF281F90CF5D0092784D /* Products */,
 				390BFC45BDDDA0597DFA021D /* Pods */,
@@ -78,11 +121,10 @@
 		F0EDAF291F90CF5D0092784D /* ShoppingListMenager */ = {
 			isa = PBXGroup;
 			children = (
-				F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */,
-				F0EDAF2C1F90CF5D0092784D /* ViewController.swift */,
+				F0A859A91F90DC7100613830 /* Extension */,
+				F020F8601F90E03500CF4B47 /* Additional Files */,
+				F020F85F1F90DFFC00CF4B47 /* View Controllers */,
 				F0EDAF2E1F90CF5D0092784D /* Main.storyboard */,
-				F0EDAF311F90CF5D0092784D /* Assets.xcassets */,
-				F0EDAF331F90CF5D0092784D /* LaunchScreen.storyboard */,
 				F0EDAF361F90CF5D0092784D /* Info.plist */,
 			);
 			path = ShoppingListMenager;
@@ -219,8 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0EDAF2D1F90CF5D0092784D /* ViewController.swift in Sources */,
+				F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */,
 				F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */,
+				F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */,
+				F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +405,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VV3H7446H;
 				INFOPLIST_FILE = ShoppingListMenager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.ShoppingListMenager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -377,11 +422,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VV3H7446H;
 				INFOPLIST_FILE = ShoppingListMenager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.booyac.ShoppingListMenager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
