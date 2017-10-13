@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D7E9458885CB28B5A4581767 /* Pods_ShoppingListMenager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */; };
 		F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020F8611F90E29100CF4B47 /* RegisterViewController.swift */; };
+		F0564E471F90E8C8001F0F23 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0564E461F90E8C8001F0F23 /* RealmController.swift */; };
+		F0564E4A1F90EF77001F0F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0564E491F90EF77001F0F23 /* User.swift */; };
+		F094A1FF1F90F0D0008EBDB6 /* RegisterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */; };
+		F094A2021F90F201008EBDB6 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2011F90F201008EBDB6 /* RealmUser.swift */; };
+		F094A2051F90F4AA008EBDB6 /* RegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2041F90F4AA008EBDB6 /* RegisterError.swift */; };
+		F094A2071F90F514008EBDB6 /* DataBaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2061F90F514008EBDB6 /* DataBaseError.swift */; };
 		F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A859AA1F90DC8400613830 /* UIViewController.swift */; };
 		F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */; };
 		F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */; };
@@ -22,6 +28,12 @@
 		D57604170656044B40D4F46B /* Pods-ShoppingListMenager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingListMenager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingListMenager/Pods-ShoppingListMenager.release.xcconfig"; sourceTree = "<group>"; };
 		EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingListMenager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F020F8611F90E29100CF4B47 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0564E461F90E8C8001F0F23 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
+		F0564E491F90EF77001F0F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHelper.swift; sourceTree = "<group>"; };
+		F094A2011F90F201008EBDB6 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		F094A2041F90F4AA008EBDB6 /* RegisterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterError.swift; sourceTree = "<group>"; };
+		F094A2061F90F514008EBDB6 /* DataBaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseError.swift; sourceTree = "<group>"; };
 		F0A859A81F90D8B100613830 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		F0A859AA1F90DC8400613830 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F0E2C96D1F90D5FC001209BD /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo.gif; sourceTree = "<group>"; };
@@ -82,6 +94,48 @@
 			path = "Additional Files";
 			sourceTree = "<group>";
 		};
+		F0564E451F90E8AF001F0F23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0564E461F90E8C8001F0F23 /* RealmController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F0564E481F90EF5B001F0F23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F094A2001F90F1E8008EBDB6 /* RealmModels */,
+				F0564E491F90EF77001F0F23 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F094A1FB1F90F06D008EBDB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F094A2001F90F1E8008EBDB6 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				F094A2011F90F201008EBDB6 /* RealmUser.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		F094A2031F90F489008EBDB6 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				F094A2041F90F4AA008EBDB6 /* RegisterError.swift */,
+				F094A2061F90F514008EBDB6 /* DataBaseError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		F0A859A91F90DC7100613830 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +175,13 @@
 		F0EDAF291F90CF5D0092784D /* ShoppingListMenager */ = {
 			isa = PBXGroup;
 			children = (
+				F020F85F1F90DFFC00CF4B47 /* View Controllers */,
+				F0564E451F90E8AF001F0F23 /* Controllers */,
+				F0564E481F90EF5B001F0F23 /* Models */,
+				F094A2031F90F489008EBDB6 /* Errors */,
+				F094A1FB1F90F06D008EBDB6 /* Helpers */,
 				F0A859A91F90DC7100613830 /* Extension */,
 				F020F8601F90E03500CF4B47 /* Additional Files */,
-				F020F85F1F90DFFC00CF4B47 /* View Controllers */,
 				F0EDAF2E1F90CF5D0092784D /* Main.storyboard */,
 				F0EDAF361F90CF5D0092784D /* Info.plist */,
 			);
@@ -262,9 +320,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */,
+				F094A2071F90F514008EBDB6 /* DataBaseError.swift in Sources */,
 				F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */,
+				F094A2021F90F201008EBDB6 /* RealmUser.swift in Sources */,
+				F0564E4A1F90EF77001F0F23 /* User.swift in Sources */,
 				F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */,
+				F094A1FF1F90F0D0008EBDB6 /* RegisterHelper.swift in Sources */,
+				F0564E471F90E8C8001F0F23 /* RealmController.swift in Sources */,
 				F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */,
+				F094A2051F90F4AA008EBDB6 /* RegisterError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
