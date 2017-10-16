@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwTextField: UITextField!
     @IBOutlet weak var retypePasswTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var realmController: RealmController!
     
@@ -27,20 +28,24 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerAction(_ sender: Any) {
         do{
-            guard let login = RegisterHelper.checkLogin(for: loginTextField.text) else { return }
-            guard let passw = RegisterHelper.checkPassw(passwTextField.text, with: retypePasswTextField.text) else { return }
-            guard let email = RegisterHelper.checkEmail(for: emailTextField.text) else { return }
-            try self.realmController.register(User(login: login, password: passw, email: email))
+            guard let login = RegisterHelper.checkLogin(for: loginTextField.text) else { throw RegisterError.invalidLogin }
+            guard let passw = RegisterHelper.checkPassw(passwTextField.text, with: retypePasswTextField.text) else { throw RegisterError.invalidPassword }
+            guard let email = RegisterHelper.checkEmail(for: emailTextField.text) else { throw RegisterError.invalidEmail }
+            let user = User(login: login, password: passw, email: email)
+            try self.realmController.register(user)
+            performSegue(withIdentifier: "sucessfullRegisterSegue", sender: self)
         }catch let registerError as RegisterError{
-            
+            self.errorLabel.isHidden = false
+            self.errorLabel.text = registerError.rawValue
         }catch let dataBaseError as DataBaseError{
-            
+            errorLabel.isHidden = false
+            self.errorLabel.text = dataBaseError.rawValue
         }catch is Error{
-            
+            errorLabel.isHidden = false
+            self.errorLabel.text = "Unknown error"
         }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

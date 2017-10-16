@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if UserDefaults.standard.bool(forKey: "isLogInUser"){
+            let profileViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "profileStoryboard")
+            profileViewController.modalTransitionStyle = .crossDissolve
+            window?.rootViewController = profileViewController
+            window?.makeKeyAndVisible()
+        }
         return true
     }
 

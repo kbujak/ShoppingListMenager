@@ -12,6 +12,4 @@ enum RegisterError: String, Error{
     case invalidLogin = "Invalid Login"
     case invalidPassword = "Invalid password"
     case invalidEmail = "Invalid email"
-    case loginTaken = "Choosen login is taken"
-    case emailTaken = "Choosen email is taken"
 }
