@@ -22,8 +22,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
-        self.realmController = RealmController()
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.async {
+            self.realmController = RealmController()
+        }
     }
 
     @IBAction func registerAction(_ sender: Any) {
@@ -44,8 +45,5 @@ class RegisterViewController: UIViewController {
             errorLabel.isHidden = false
             self.errorLabel.text = "Unknown error"
         }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

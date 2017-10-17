@@ -8,15 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		D7E9458885CB28B5A4581767 /* Pods_ShoppingListMenager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */; };
+		F011D2C41F9527EA00AF7F34 /* NewShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011D2C31F9527EA00AF7F34 /* NewShoppingListTableViewCell.swift */; };
+		F011D2C61F95291F00AF7F34 /* NewShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F011D2C51F95291F00AF7F34 /* NewShoppingListTableViewController.swift */; };
 		F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020F8611F90E29100CF4B47 /* RegisterViewController.swift */; };
+		F023FF441F95105C00DE2B28 /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023FF431F95105C00DE2B28 /* ShoppingListTableViewCell.swift */; };
+		F023FF471F95128400DE2B28 /* ShoppingListStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023FF461F95128400DE2B28 /* ShoppingListStates.swift */; };
 		F0564E471F90E8C8001F0F23 /* RealmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0564E461F90E8C8001F0F23 /* RealmController.swift */; };
 		F0564E4A1F90EF77001F0F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0564E491F90EF77001F0F23 /* User.swift */; };
+		F06AA4481F94B7C10047F310 /* LogInUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06AA4471F94B7C10047F310 /* LogInUsers.swift */; };
+		F07DD7381F94F458003CB43B /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DD7371F94F458003CB43B /* ShoppingListTableViewController.swift */; };
+		F07DD73A1F94F8A7003CB43B /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DD7391F94F8A7003CB43B /* ShoppingItem.swift */; };
+		F07DD73C1F94F923003CB43B /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DD73B1F94F923003CB43B /* ShoppingList.swift */; };
+		F07DD73E1F94FBD0003CB43B /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07DD73D1F94FBD0003CB43B /* DateHelper.swift */; };
 		F094A1FF1F90F0D0008EBDB6 /* RegisterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */; };
 		F094A2021F90F201008EBDB6 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2011F90F201008EBDB6 /* RealmUser.swift */; };
 		F094A2051F90F4AA008EBDB6 /* RegisterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2041F90F4AA008EBDB6 /* RegisterError.swift */; };
 		F094A2071F90F514008EBDB6 /* DataBaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094A2061F90F514008EBDB6 /* DataBaseError.swift */; };
 		F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A859AA1F90DC8400613830 /* UIViewController.swift */; };
 		F0ADE2071F93724200C0D9C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ADE2061F93724200C0D9C1 /* ProfileViewController.swift */; };
+		F0D53D631F967AB000746520 /* ShoppingItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D53D621F967AB000746520 /* ShoppingItemTableViewController.swift */; };
+		F0D53D651F968CC100746520 /* RealmShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D53D641F968CC100746520 /* RealmShoppingList.swift */; };
+		F0D53D671F968E6200746520 /* RealmShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D53D661F968E6200746520 /* RealmShoppingItem.swift */; };
 		F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */; };
 		F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */; };
 		F0EDAF301F90CF5D0092784D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0EDAF2E1F90CF5D0092784D /* Main.storyboard */; };
@@ -28,9 +40,18 @@
 		C5EC03F6C854EAF4934B3E0B /* Pods-ShoppingListMenager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingListMenager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingListMenager/Pods-ShoppingListMenager.debug.xcconfig"; sourceTree = "<group>"; };
 		D57604170656044B40D4F46B /* Pods-ShoppingListMenager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingListMenager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShoppingListMenager/Pods-ShoppingListMenager.release.xcconfig"; sourceTree = "<group>"; };
 		EB26216E549D45E1984332CA /* Pods_ShoppingListMenager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingListMenager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F011D2C31F9527EA00AF7F34 /* NewShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		F011D2C51F95291F00AF7F34 /* NewShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		F020F8611F90E29100CF4B47 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F023FF431F95105C00DE2B28 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
+		F023FF461F95128400DE2B28 /* ShoppingListStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListStates.swift; sourceTree = "<group>"; };
 		F0564E461F90E8C8001F0F23 /* RealmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmController.swift; sourceTree = "<group>"; };
 		F0564E491F90EF77001F0F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F06AA4471F94B7C10047F310 /* LogInUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInUsers.swift; sourceTree = "<group>"; };
+		F07DD7371F94F458003CB43B /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		F07DD7391F94F8A7003CB43B /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		F07DD73B1F94F923003CB43B /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		F07DD73D1F94FBD0003CB43B /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHelper.swift; sourceTree = "<group>"; };
 		F094A2011F90F201008EBDB6 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		F094A2041F90F4AA008EBDB6 /* RegisterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterError.swift; sourceTree = "<group>"; };
@@ -39,7 +60,9 @@
 		F0A859AA1F90DC8400613830 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F0ADE2051F9361D400C0D9C1 /* button-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-2.png"; sourceTree = "<group>"; };
 		F0ADE2061F93724200C0D9C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F0E2C96D1F90D5FC001209BD /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logo.gif; sourceTree = "<group>"; };
+		F0D53D621F967AB000746520 /* ShoppingItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewController.swift; sourceTree = "<group>"; };
+		F0D53D641F968CC100746520 /* RealmShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmShoppingList.swift; sourceTree = "<group>"; };
+		F0D53D661F968E6200746520 /* RealmShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmShoppingItem.swift; sourceTree = "<group>"; };
 		F0EDAF271F90CF5D0092784D /* ShoppingListMenager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingListMenager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EDAF2A1F90CF5D0092784D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,9 +104,13 @@
 		F020F85F1F90DFFC00CF4B47 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F0347BFD1F967A3D00EADD27 /* Cell */,
 				F0EDAF2C1F90CF5D0092784D /* LoginViewController.swift */,
 				F020F8611F90E29100CF4B47 /* RegisterViewController.swift */,
 				F0ADE2061F93724200C0D9C1 /* ProfileViewController.swift */,
+				F07DD7371F94F458003CB43B /* ShoppingListTableViewController.swift */,
+				F011D2C51F95291F00AF7F34 /* NewShoppingListTableViewController.swift */,
+				F0D53D621F967AB000746520 /* ShoppingItemTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -96,6 +123,23 @@
 				F0EDAF331F90CF5D0092784D /* LaunchScreen.storyboard */,
 			);
 			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		F023FF451F95124D00DE2B28 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F023FF461F95128400DE2B28 /* ShoppingListStates.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F0347BFD1F967A3D00EADD27 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F023FF431F95105C00DE2B28 /* ShoppingListTableViewCell.swift */,
+				F011D2C31F9527EA00AF7F34 /* NewShoppingListTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F0564E451F90E8AF001F0F23 /* Controllers */ = {
@@ -111,6 +155,8 @@
 			children = (
 				F094A2001F90F1E8008EBDB6 /* RealmModels */,
 				F0564E491F90EF77001F0F23 /* User.swift */,
+				F07DD7391F94F8A7003CB43B /* ShoppingItem.swift */,
+				F07DD73B1F94F923003CB43B /* ShoppingList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				F094A1FE1F90F0D0008EBDB6 /* RegisterHelper.swift */,
+				F07DD73D1F94FBD0003CB43B /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -127,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				F094A2011F90F201008EBDB6 /* RealmUser.swift */,
+				F06AA4471F94B7C10047F310 /* LogInUsers.swift */,
+				F0D53D641F968CC100746520 /* RealmShoppingList.swift */,
+				F0D53D661F968E6200746520 /* RealmShoppingItem.swift */,
 			);
 			path = RealmModels;
 			sourceTree = "<group>";
@@ -151,7 +201,6 @@
 		F0E2C96C1F90D5EA001209BD /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F0E2C96D1F90D5FC001209BD /* logo.gif */,
 				F0A859A81F90D8B100613830 /* button.png */,
 				F0ADE2051F9361D400C0D9C1 /* button-2.png */,
 			);
@@ -186,6 +235,7 @@
 				F094A2031F90F489008EBDB6 /* Errors */,
 				F094A1FB1F90F06D008EBDB6 /* Helpers */,
 				F0A859A91F90DC7100613830 /* Extension */,
+				F023FF451F95124D00DE2B28 /* Enums */,
 				F020F8601F90E03500CF4B47 /* Additional Files */,
 				F0EDAF2E1F90CF5D0092784D /* Main.storyboard */,
 				F0EDAF361F90CF5D0092784D /* Info.plist */,
@@ -324,16 +374,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07DD7381F94F458003CB43B /* ShoppingListTableViewController.swift in Sources */,
 				F0EDAF2D1F90CF5D0092784D /* LoginViewController.swift in Sources */,
 				F094A2071F90F514008EBDB6 /* DataBaseError.swift in Sources */,
 				F0EDAF2B1F90CF5D0092784D /* AppDelegate.swift in Sources */,
+				F011D2C61F95291F00AF7F34 /* NewShoppingListTableViewController.swift in Sources */,
+				F023FF441F95105C00DE2B28 /* ShoppingListTableViewCell.swift in Sources */,
+				F023FF471F95128400DE2B28 /* ShoppingListStates.swift in Sources */,
+				F07DD73A1F94F8A7003CB43B /* ShoppingItem.swift in Sources */,
 				F094A2021F90F201008EBDB6 /* RealmUser.swift in Sources */,
 				F0564E4A1F90EF77001F0F23 /* User.swift in Sources */,
+				F07DD73C1F94F923003CB43B /* ShoppingList.swift in Sources */,
 				F0A859AB1F90DC8400613830 /* UIViewController.swift in Sources */,
+				F07DD73E1F94FBD0003CB43B /* DateHelper.swift in Sources */,
 				F0ADE2071F93724200C0D9C1 /* ProfileViewController.swift in Sources */,
+				F011D2C41F9527EA00AF7F34 /* NewShoppingListTableViewCell.swift in Sources */,
+				F0D53D671F968E6200746520 /* RealmShoppingItem.swift in Sources */,
+				F0D53D651F968CC100746520 /* RealmShoppingList.swift in Sources */,
 				F094A1FF1F90F0D0008EBDB6 /* RegisterHelper.swift in Sources */,
+				F0D53D631F967AB000746520 /* ShoppingItemTableViewController.swift in Sources */,
 				F0564E471F90E8C8001F0F23 /* RealmController.swift in Sources */,
 				F020F8621F90E29100CF4B47 /* RegisterViewController.swift in Sources */,
+				F06AA4481F94B7C10047F310 /* LogInUsers.swift in Sources */,
 				F094A2051F90F4AA008EBDB6 /* RegisterError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

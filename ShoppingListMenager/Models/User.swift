@@ -18,4 +18,10 @@ class User{
         self.password = password
         self.email = email
     }
+    
+    init(realmUser: RealmUser){
+        self.login = realmUser.login
+        self.password = realmUser.password
+        self.email = realmUser.email
+    }
 }

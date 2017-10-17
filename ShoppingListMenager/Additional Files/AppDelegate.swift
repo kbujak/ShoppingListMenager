@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         if UserDefaults.standard.bool(forKey: "isLogInUser"){
-            let profileViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "profileStoryboard")
+            let profileViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarStoryboard")
             profileViewController.modalTransitionStyle = .crossDissolve
             window?.rootViewController = profileViewController
             window?.makeKeyAndVisible()

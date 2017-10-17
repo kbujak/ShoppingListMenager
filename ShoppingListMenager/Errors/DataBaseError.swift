@@ -10,6 +10,8 @@ import Foundation
 
 enum DataBaseError: String, Error{
     case connectionError = "Connection Error"
-    case loginTaken = "Choosen login is taken"
-    case emailTaken = "Choosen email is taken"
+    case loginTakenError = "Choosen login is taken"
+    case emailTakenError = "Choosen email is taken"
+    case userNotExistError = "Given user doesn't exist"
+    case improperPasswordError = "You give improper password"
 }
