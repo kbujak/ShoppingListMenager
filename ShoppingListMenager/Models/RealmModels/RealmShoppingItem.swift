@@ -18,9 +18,4 @@ class RealmShoppingItem: Object{
         self.name = name
         self.count = count
     }
-    convenience init(item: ShoppingItem){
-        self.init()
-        self.name = item.name
-        self.count = item.count
-    }
 }

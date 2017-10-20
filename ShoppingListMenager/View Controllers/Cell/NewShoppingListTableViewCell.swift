@@ -9,6 +9,7 @@
 import UIKit
 
 class NewShoppingListTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
@@ -20,5 +21,4 @@ class NewShoppingListTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }

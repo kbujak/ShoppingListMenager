@@ -26,11 +26,11 @@ class ShoppingListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(with shoppingList: ShoppingList){
+    func update(with shoppingList: RealmShoppingList){
         self.dateLabel.text = DateHelper.getStringFromDate(with: .medium, date: shoppingList.date)
         self.authorLabel.text = "Author: \(shoppingList.author.login)"
         self.ownerLabel.text = "Owner: " + (shoppingList.owner != nil ? (shoppingList.owner?.login)! : "none")
-        self.stateLabel.text = shoppingList.state.rawValue
+        self.stateLabel.text = ShoppingListStates(intValue: shoppingList.state).rawValue
     }
 
 }

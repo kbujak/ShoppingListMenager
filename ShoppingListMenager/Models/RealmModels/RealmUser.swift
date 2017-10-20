@@ -14,10 +14,17 @@ class RealmUser: Object{
     @objc dynamic var password = ""
     @objc dynamic var email = ""
     
-    convenience init(user: User){
+    convenience init(login: String, password: String, email: String){
         self.init()
-        self.login = user.login
-        self.password = user.password
-        self.email = user.email
+        self.login = login
+        self.password = password
+        self.email = email
+    }
+    
+    convenience init(realmUser: RealmUser){
+        self.init()
+        self.login = realmUser.login
+        self.password = realmUser.password
+        self.email = realmUser.email
     }
 }

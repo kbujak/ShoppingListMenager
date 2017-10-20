@@ -16,13 +16,11 @@ class RealmShoppingList: Object{
     @objc dynamic var state = 0
     var shoppingItemList = List<RealmShoppingItem>()
     
-    convenience init(shoppingList: ShoppingList) {
+    convenience init(author: RealmUser, state: ShoppingListStates, shoppingItemList: [RealmShoppingItem]) {
         self.init()
         self.date = Date()
-        self.author = RealmUser(user: shoppingList.author)
-        self.state = shoppingList.state.intValue
-        for shoppingItems in shoppingList.shoppingItemArray{
-            shoppingItemList.append(RealmShoppingItem(item: shoppingItems))
-        }
+        self.author = author
+        self.state = state.intValue
+        self.shoppingItemList = List(shoppingItemList)
     }
 }

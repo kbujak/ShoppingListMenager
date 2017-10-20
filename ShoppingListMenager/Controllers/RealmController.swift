@@ -12,11 +12,11 @@ import RealmSwift
 class RealmController{
     let user = "kbujak421@gmail.com"
     let password = "test123"
-    let serverPath = "http://52.211.55.147:9080"
-    let realmPath = "realm://52.211.55.147:9080/~/Shop"
+    let serverPath = "http://34.251.196.11:9080"
+    let realmPath = "realm://34.251.196.11:9080/~/Shop"
     var realm: Realm!
     
-    private func checkIfUserAvailable(_ user: User) throws{
+    private func checkIfUserAvailable(_ user: RealmUser) throws{
         let dbUsers = realm.objects(RealmUser.self)
         guard dbUsers.filter("login == %@", user.login).count < 1 else { throw DataBaseError.loginTakenError }
         guard dbUsers.filter("email == %@", user.email).count < 1 else { throw DataBaseError.emailTakenError }
@@ -30,10 +30,10 @@ class RealmController{
     }
     
     init(){
-        SyncUser.logIn(with: .usernamePassword(username: user, password: password, register: false), server: URL(string: serverPath)!){
+        SyncUser.logIn(with: .usernamePassword(username: self.user, password: self.password, register: false), server: URL(string: self.serverPath)!){
             user, error in
             guard let user = user else { return }
-            DispatchQueue.main.async {
+            DispatchQueue.main.sync {
                 let configuration = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: self.realmPath)!))
                 guard let realm = try? Realm(configuration: configuration) else { return }
                 self.realm = realm
@@ -41,11 +41,11 @@ class RealmController{
         }
     }
     
-    func register(_ user: User) throws{
+    func register(_ user: RealmUser) throws{
         if let realm = self.realm{
             try self.checkIfUserAvailable(user)
             try! realm.write {
-                realm.add(RealmUser(user: user))
+                realm.add(user)
                 realm.add(LogInUsers(login: user.login))
             }
             self.addUserToUserDefaults(with: user.login, user.email)
@@ -56,7 +56,7 @@ class RealmController{
     
     func logIn(with login: String, and password: String) throws {
         if let realm = self.realm{
-            if let user = realm.objects(RealmUser.self).filter("login == %@", login).first{
+            if let user = realm.objects(RealmUser.self).filter("login == %@", login).first as? RealmUser{
                 if user.password == password{
                     try! realm.write {
                         realm.add(LogInUsers(login: user.login))
@@ -95,10 +95,10 @@ class RealmController{
         return nil
     }
     
-    func addShoppingList(with list: ShoppingList){
+    func addShoppingList(with list: RealmShoppingList){
         if let realm = self.realm{
             try! realm.write {
-                realm.add(RealmShoppingList(shoppingList: list))
+                realm.add(list)
             }
         }
     }
@@ -108,5 +108,14 @@ class RealmController{
             return Array(realm.objects(RealmShoppingList.self))
         }
         return nil
+    }
+    
+    func assignOwnerToList(with list: RealmShoppingList){
+        if let realm = self.realm{            
+            try! realm.write {
+                list.owner = getLogInUser()!
+                list.state = 1
+            }
+        }
     }
 }

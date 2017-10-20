@@ -14,13 +14,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
-    var realmController: RealmController!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.realmController = RealmController()
-        }
         if UserDefaults.standard.bool(forKey: "isLogInUser"){
             self.nameLabel.text = UserDefaults.standard.string(forKey: "logInUserLogin")
             self.emailLabel.text = UserDefaults.standard.string(forKey: "logInUserEmail")
@@ -28,7 +25,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutAct(_ sender: Any) {
-        try! self.realmController.logOut(with: self.nameLabel.text!)
+        try! delegate.realmController.logOut(with: self.nameLabel.text!)
         UserDefaults.standard.setValue(false, forKey: "isLogInUser")
         UserDefaults.standard.setValue(nil, forKey: "logInUserLogin")
         UserDefaults.standard.setValue(nil, forKey: "logInUserEmail")

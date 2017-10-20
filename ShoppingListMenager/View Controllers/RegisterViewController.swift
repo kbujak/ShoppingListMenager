@@ -17,14 +17,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var realmController: RealmController!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
-        DispatchQueue.main.async {
-            self.realmController = RealmController()
-        }
     }
 
     @IBAction func registerAction(_ sender: Any) {
@@ -32,8 +29,8 @@ class RegisterViewController: UIViewController {
             guard let login = RegisterHelper.checkLogin(for: loginTextField.text) else { throw RegisterError.invalidLogin }
             guard let passw = RegisterHelper.checkPassw(passwTextField.text, with: retypePasswTextField.text) else { throw RegisterError.invalidPassword }
             guard let email = RegisterHelper.checkEmail(for: emailTextField.text) else { throw RegisterError.invalidEmail }
-            let user = User(login: login, password: passw, email: email)
-            try self.realmController.register(user)
+            let user = RealmUser(login: login, password: passw, email: email)
+            try delegate.realmController.register(user)
             performSegue(withIdentifier: "sucessfullRegisterSegue", sender: self)
         }catch let registerError as RegisterError{
             self.errorLabel.isHidden = false

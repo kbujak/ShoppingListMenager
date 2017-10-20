@@ -10,15 +10,12 @@ import UIKit
 
 class NewShoppingListTableViewController: UITableViewController {
 
-    var shoppingItems = [ShoppingItem]()
-    var realmController: RealmController!
+    var shoppingItems = [RealmShoppingItem]()
+    let delegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
-        DispatchQueue.main.async {
-            self.realmController = RealmController()
-        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,10 +35,12 @@ class NewShoppingListTableViewController: UITableViewController {
     }
     
     @IBAction func saveNewShoppingList(_ sender: Any) {
-        if let user = realmController.getLogInUser(){
-            let newShoppingList = ShoppingList(user: User(realmUser: user) , shoppingItemArray: shoppingItems)
-            realmController.addShoppingList(with: newShoppingList)
-            performSegue(withIdentifier: "addedListSegue", sender: self)
+        if let author = delegate.realmController.getLogInUser(){
+            if shoppingItems.count > 0{
+                let newShoppingList = RealmShoppingList(author: author, state: .created, shoppingItemList: shoppingItems)
+                delegate.realmController.addShoppingList(with: newShoppingList)
+                performSegue(withIdentifier: "test", sender: self)
+            }            
         }
     }
     
@@ -49,7 +48,7 @@ class NewShoppingListTableViewController: UITableViewController {
         let newItemVC = unwindSegue.source as! ShoppingItemTableViewController
         guard let name = newItemVC.nameLabel.text, let countString = newItemVC.countLabel.text, let count = Int(countString) else { return }
         guard !name.isEmpty, count > 0 else { return }
-        self.shoppingItems.append(ShoppingItem(name: name, count: count))
+        self.shoppingItems.append(RealmShoppingItem(name: name, count: count))
     }
     
     override func viewWillAppear(_ animated: Bool) {

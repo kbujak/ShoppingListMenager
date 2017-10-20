@@ -12,9 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var realmController: RealmController!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.realmController = RealmController()
+        
         if UserDefaults.standard.bool(forKey: "isLogInUser"){
             let profileViewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarStoryboard")
             profileViewController.modalTransitionStyle = .crossDissolve

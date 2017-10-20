@@ -15,21 +15,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    var realmController: RealmController!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTapGestureRecognizer()
-        DispatchQueue.main.async {
-            self.realmController = RealmController()
-        }
     }
 
     @IBAction func logInAct(_ sender: Any) {
         do{
             guard let login = loginTextField.text else { return }
             guard let passw = passwTextField.text else { return }
-            try self.realmController.logIn(with: login, and: passw)
+            try delegate.realmController.logIn(with: login, and: passw)
             performSegue(withIdentifier: "loginSegue", sender: self)
         }catch let dbError as DataBaseError{
             self.errorLabel.isHidden = false

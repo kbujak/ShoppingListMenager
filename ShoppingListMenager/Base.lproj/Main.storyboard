@@ -292,8 +292,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lQ7-j4-qIK" kind="relationship" relationship="viewControllers" id="Bob-ET-BAd"/>
                         <segue destination="oPb-ea-IDt" kind="relationship" relationship="viewControllers" id="wui-uY-PRb"/>
+                        <segue destination="lQ7-j4-qIK" kind="relationship" relationship="viewControllers" id="Bob-ET-BAd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y68-sF-g4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,6 +369,7 @@
                                     <outlet property="dateLabel" destination="dun-mi-ZYZ" id="YvM-52-ikB"/>
                                     <outlet property="ownerLabel" destination="5xX-pu-996" id="m7J-u1-3hv"/>
                                     <outlet property="stateLabel" destination="9iG-Gc-7tw" id="wAF-C9-cG0"/>
+                                    <segue destination="Q76-Tk-rKF" kind="show" identifier="selectedListSegue" id="tfg-pT-te9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -380,6 +381,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="Hp2-Iw-bPN"/>
                     <navigationItem key="navigationItem" title="Zakupy do zrobienia" id="986-tp-u2c">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="JiI-rt-3rk"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PaP-Ye-gHp">
                             <connections>
                                 <segue destination="swa-Jz-p0G" kind="show" id="oAi-RI-XZi"/>
@@ -391,6 +393,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSN-UP-OTg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2394" y="173"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="BX9-XE-m7c">
+            <objects>
+                <tableViewController id="Q76-Tk-rKF" customClass="TakeRemoveListTableViewController" customModule="ShoppingListMenager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ryX-Pw-Gd1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="lJo-zs-OqN" customClass="NewShoppingListTableViewCell" customModule="ShoppingListMenager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJo-zs-OqN" id="SMs-Ga-MeX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nazwa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXE-G7-Hlf">
+                                            <rect key="frame" x="8" y="13" width="177" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ilość" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk2-Zz-btx">
+                                            <rect key="frame" x="276" y="13" width="36" height="17.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tk2-Zz-btx" firstAttribute="top" secondItem="SMs-Ga-MeX" secondAttribute="topMargin" constant="5" id="DkY-K0-ENS"/>
+                                        <constraint firstItem="tk2-Zz-btx" firstAttribute="leading" secondItem="YXE-G7-Hlf" secondAttribute="trailing" constant="91" id="Sj3-DP-nBI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YXE-G7-Hlf" secondAttribute="bottom" constant="5" id="Ytz-gx-jic"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tk2-Zz-btx" secondAttribute="bottom" constant="5" id="bJc-DW-IVI"/>
+                                        <constraint firstItem="YXE-G7-Hlf" firstAttribute="top" secondItem="SMs-Ga-MeX" secondAttribute="topMargin" constant="5" id="bdu-gg-yn3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tk2-Zz-btx" secondAttribute="trailing" id="gTo-ac-sTs"/>
+                                        <constraint firstItem="YXE-G7-Hlf" firstAttribute="leading" secondItem="SMs-Ga-MeX" secondAttribute="leadingMargin" id="gmA-fF-fHs"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countLabel" destination="tk2-Zz-btx" id="ma3-cy-5Yw"/>
+                                    <outlet property="nameLabel" destination="YXE-G7-Hlf" id="sLL-wi-aPj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q76-Tk-rKF" id="6eW-Qp-s3e"/>
+                            <outlet property="delegate" destination="Q76-Tk-rKF" id="gdR-4U-vPP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="cQb-Oi-QDD">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Weź" id="aB6-cg-kCo">
+                                <connections>
+                                    <action selector="takeListAct:" destination="Q76-Tk-rKF" id="7HO-wR-jjj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Zakończ" id="z9s-zF-3eO">
+                                <connections>
+                                    <action selector="removeListAct:" destination="Q76-Tk-rKF" id="TIl-vJ-fgY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="removeListButton" destination="z9s-zF-3eO" id="b1b-Nh-829"/>
+                        <outlet property="takeListButton" destination="aB6-cg-kCo" id="2cS-pX-KpE"/>
+                        <segue destination="0ip-nG-Zxo" kind="unwind" identifier="backToShoppingListSegue" unwindAction="unwindToShoppingListFor:" id="syu-lZ-Mq0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IH3-F6-BB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0ip-nG-Zxo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3219" y="508"/>
         </scene>
         <!--Lista-->
         <scene sceneID="Cj0-kx-ZeZ">
@@ -458,12 +535,13 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <segue destination="MLY-rA-Din" kind="show" identifier="addedListSegue" id="uA6-14-2gu"/>
+                        <segue destination="Edk-25-yc9" kind="unwind" identifier="test" unwindAction="unwindToShoppingListFor:" id="efF-t7-PMg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILm-Cv-DB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Edk-25-yc9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3189" y="172"/>
+            <point key="canvasLocation" x="3219" y="-289"/>
         </scene>
         <!--Składnik-->
         <scene sceneID="Txe-Da-2sl">
@@ -547,7 +625,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oId-Wj-u7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nXt-Ib-Hdn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="172"/>
+            <point key="canvasLocation" x="4101" y="-289"/>
         </scene>
         <!--Item-->
         <scene sceneID="fFS-V0-DUJ">
@@ -704,7 +782,6 @@
         <image name="turn-off-icon-png-14571" width="275" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uA6-14-2gu"/>
-        <segue reference="Hwf-o1-Me8"/>
+        <segue reference="sg1-cx-a8a"/>
     </inferredMetricsTieBreakers>
 </document>
